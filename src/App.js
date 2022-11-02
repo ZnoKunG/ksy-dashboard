@@ -3,7 +3,7 @@ import './App.css';
 const schedule = require('node-schedule')
 const json = require('./employee_birthday.json')
 
-const emailList = ['zno.ksy@gmail.com', 'ksytractor@gmail.com', 'montree_s@hotmail.com']
+const emailList = ['zno.ksy@gmail.com', 'ksytractor@hotmail.com', 'montree_s@hotmail.com']
 async function sendEmployeeBirthDay() {
   const offset = 4
   const resp = await fetch(`https://ksy-api.herokuapp.com/employee/birthday?offset=${offset}`)
