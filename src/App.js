@@ -23,7 +23,12 @@ async function sendEmployeeBirthDay() {
         console.log('SUCCESS!', sendResp.status, sendResp.text)
       });
     } else {
-      console.log(`There is no birthday for the incoming ${offset} days`)
+      const sendResp = await emailjs.send("service_sdpje5r","ksy-birthday", {
+        to_email: 'zno.ksy@gmail.com',
+        offset: offset,
+        employee_list: `There is no birthday for the incoming ${offset} days`
+      }, "zrDvfvBlWz3V4tX7e")
+      console.log('SUCCESS!', sendResp.status, sendResp.text)
     }
   } catch (err) {
     console.log(err)
