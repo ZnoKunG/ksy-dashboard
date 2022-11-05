@@ -26,7 +26,7 @@ async function sendEmployeeBirthDay() {
       const sendResp = await emailjs.send("service_sdpje5r","ksy-birthday", {
         to_email: 'zno.ksy@gmail.com',
         offset: offset,
-        employee_list: `There is no birthday for the incoming ${offset} days`
+        employee_list: `ยังม่มีวันเกิดภายในอีก ${offset} วัน`
       }, "zrDvfvBlWz3V4tX7e")
       console.log('SUCCESS!', sendResp.status, sendResp.text)
     }
