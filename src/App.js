@@ -37,6 +37,8 @@ async function sendEmployeeBirthDay() {
 
 const rule = new schedule.RecurrenceRule()
 rule.hour = 8
+rule.minute = 0
+rule.second = 0
 const sendEmailJob = schedule.scheduleJob(rule, async () => {
   await sendEmployeeBirthDay()
 })
